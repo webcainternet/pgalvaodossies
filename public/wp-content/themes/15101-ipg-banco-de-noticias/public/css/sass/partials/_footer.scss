@@ -1,0 +1,127 @@
+$footer-height-mob: 250px;
+$footer-height: 250px;
+
+.page-wrapper {
+    margin-bottom: $footer-height-mob * 1.75;
+}
+
+.home {
+    .footer {
+        position: relative !important;
+    }
+
+    .page-wrapper {
+        margin-bottom: 30px !important;
+    }
+}
+
+.footer {
+    text-align: center;
+
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: $footer-height-mob;
+    padding: 30px 0;
+    bottom: 0;
+    left: 0;
+
+    &__menu {
+        display: none;
+        margin: 25px 0;
+
+        .menu { padding: 0; }
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: $fw-regular;
+
+        display: block;
+        margin: 50px 0 10px;
+
+        &--copyright {
+            font-style: italic;
+        }
+    }
+
+    &__brand {
+        position: relative;
+        display: block;
+        width: 140px;
+        margin: 0 auto;
+        vertical-align: middle;
+
+        border-radius: 5px;
+    }
+
+    &__support-brand {
+        position: relative;
+        display: block;
+        max-width: 120px;
+        margin: 10px auto 0;
+    }
+
+    &__brand-image,
+    &__support-brand-image {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+
+        &--42i {
+            margin-top: 0;
+        }
+    }
+
+    .menu-item {
+        font-size: 14px;
+
+        position: relative;
+        display: inline-block;
+
+        &:not(:last-child){
+            margin-right: 10px;
+            padding-right: 10px;
+
+            border-right: 1px solid $c-gray;
+        }
+
+        a {
+            color: $c-gray;
+            transition: color 0.25s ease;
+
+            &:hover {
+                color: $c-link;
+            }
+        }
+    }
+
+    .current_page_item a,
+    .current_page_parent a {
+        color: $c-black;
+    }
+
+    .sub-menu {
+        position: absolute;
+        display: none;
+
+        background: $c-gray;
+
+        .menu-item a {}
+    }
+}
+
+@media all and (min-width: $media-query-tablet) {
+    .footer {
+        &__text { margin: 0 0 10px; }
+
+        &__brand { margin: 10px auto; }
+
+        &__support-brand { margin: 5px auto 0; }
+
+        &__menu { display: block; }
+
+        &__brand-image--42i { margin-top: 20px; }
+    }
+}

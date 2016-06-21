@@ -1,0 +1,11 @@
+@mixin colorset($hash) {
+    @each $category, $color in $hash {
+        .sub-menu {
+            .menu-item--#{$category} {
+                a {
+                    background: $color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+// Form
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+textarea,
+select {
+    font-style: italic;
+    height: 35px;
+    padding: 8px 15px;
+    width: 100%;
+
+    appearance: none;
+    background-color: transparent;
+    border: 1 solid $c-quaternary;
+    border-radius: 5px;
+    box-shadow: none;
+
+	&:focus {
+		border: 1px solid $c-primary;
+		outline: 0;
+    }
+}
+
+select {
+	padding: 8px 20px 8px 15px;
+}
+
+textarea {
+	padding-bottom: 8px;
+	padding-top: 8px;
+	min-height: 100px;
+}
+
+label,
+legend {
+	font-size: 14px;
+	font-weight: 700;
+
+	display: block;
+	margin-bottom: 10px;
+}
+
+fieldset {
+	border-width: 0;
+	padding: 0;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+	display: inline;
+}
+
+.label-inline {
+	font-weight: normal;
+
+	display: inline-block;
+	margin-left: 10px;
+}
+
+input[type='radio'] {
+    appearance:none;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    border-radius:50%;
+    margin: 0 4px 0 0;
+    outline:none;
+    position: relative;
+    background: $c-white;
+    transition: box-shadow 0.2s ease;
+}
+
+input[type='radio']:hover {
+    box-shadow:  0 0 7px 2px $c-gray inset;
+}
+
+input[type='radio']:before {
+    content:'';
+    display:block;
+    width: 0px;
+    height: 0px;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $c-gray-d3;
+    transition: width 0.2s ease, height 0.2s ease;
+}
+input[type='radio']:checked:before {
+    width: 8px;
+    height: 8px;
+}

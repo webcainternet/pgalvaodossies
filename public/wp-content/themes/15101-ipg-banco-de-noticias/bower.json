@@ -1,0 +1,32 @@
+{
+  "name": "IOS",
+  "version": "1.0.0",
+  "authors": [
+    "42i <projetos@42i.com.br>"
+  ],
+  "description": "",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "42i",
+    "site"
+  ],
+  "license": "MIT",
+  "homepage": "http://42i.com.br",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "normalize-scss": "~3.0.3",
+    "underscore": "~1.8.3",
+    "flexslider": "^2.6.0",
+    "chosen": "^1.5.1"
+  }
+}

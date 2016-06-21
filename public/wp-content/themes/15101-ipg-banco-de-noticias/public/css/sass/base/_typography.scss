@@ -1,0 +1,35 @@
+// general tag adjustments
+// --------------------------------------------------
+
+html {
+    position: relative;
+    min-height: 100%;
+
+    * { box-sizing: border-box; }
+}
+
+body {
+    font-family: $ff-text;
+    font-kerning: normal;
+    -webkit-font-smoothing: antialiased;
+
+    min-height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $ff-heading;
+    font-weight: $fw-bold;
+    letter-spacing: -0.025em;
+}
+
+button {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover { text-decoration: none; }
+}

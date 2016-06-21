@@ -1,0 +1,10 @@
+@mixin gradient_transparent-header($color1) {
+    background: $color1; /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(218,37,28,0) 0%, $color1 32%, $color1 46%, $color1 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(218,37,28,0)), color-stop(32%,$color1), color-stop(46%,$color1), color-stop(100%,$color1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(218,37,28,0) 0%,$color1 32%,$color1 46%,$color1 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(218,37,28,0) 0%,$color1 32%,$color1 46%,$color1 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(218,37,28,0) 0%,$color1 32%,$color1 46%,$color1 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(218,37,28,0) 0%,$color1 32%,$color1 46%,$color1 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#1e5799',GradientType=1 ); /* IE6-9 */
+}

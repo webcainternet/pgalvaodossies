@@ -1,0 +1,103 @@
+// General Utils
+// --------------------------------------------------
+
+.aligner {
+    text-align: center;
+
+    display: block;
+
+    &--left { text-align: left; }
+    &--right { text-align: right; }
+}
+
+.caligner {
+    &--center,
+    &--left,
+    &--right { display: block; }
+
+    &--center { margin: 1em auto; }
+
+    &--left {
+        float: left;
+        margin: 1em 2em 1em 0;
+    }
+
+    &--right {
+        float: right;
+        margin: 1em 0 1em 2em;
+    }
+}
+
+.vertical-align {
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    &__child {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &--top {
+        &__child { vertical-align: top; }
+    }
+
+    &--bottom {
+        &__child { vertical-align: bottom; }
+    }
+}
+
+.hidden { display: none !important; }
+
+.hidden-xs { display: none; }
+
+.pull-left {
+  display: inline-block;
+  float: left !important;
+}
+
+.pull-right {
+  display: inline-block;
+  float: right !important;
+}
+
+.clearfix { @include clearfix(); }
+
+.block { display: block; }
+
+// Image utils
+// --------------------------------------------------
+.img-clipper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.img-full-width {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.img-thumb {
+  width: 100px;
+
+  img { width: 100%; }
+}
+.no-mobile { display: none !important; }
+.no-desktop { display: block !important; }
+
+@media (min-width: $media-query-tablet) {
+  .hidden-xs { display: block; }
+  .hidden-md { display: none; }
+
+  .no-mobile { display: block !important; }
+  .no-desktop { display: none !important; }
+}

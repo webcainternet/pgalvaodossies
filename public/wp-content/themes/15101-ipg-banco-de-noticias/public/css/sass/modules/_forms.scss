@@ -1,0 +1,177 @@
+input {
+    width: 100%;
+
+    border: none;
+
+    &:focus { outline: none; }
+}
+
+button {
+
+}
+
+select {
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + span {
+    position: relative;
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+
+    background: transparent;
+    border: 2px solid cvt($c-white, 5);
+
+    &:before {
+        content: "√";
+
+        font-size: 26px;
+        line-height: 20px;
+        font-weight: $fw-bold;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        opacity: 0;
+        transition: opacity 0.25s ease;
+    }
+}
+
+input[type="checkbox"]:checked + span:before { opacity: 1; }
+
+.filters {
+    display: block;
+    margin: 0 0 30px;
+    padding: 25px 30px 30px;
+
+    border: 3px double $c-gray;
+    position: relative;
+
+    &__item {
+        font-size: 14px;
+        font-style: italic;
+
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 15px;
+    }
+
+    &__label {
+        display: block;
+
+        color: $c-gray;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 5px 10px;
+
+        border: 1px solid cvt($c-gray, 7);
+        box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    &__button {
+        font-size: 14px;
+
+        padding: 5px 10px;
+
+        color: $c-black;
+        background: $c-white;
+        border: 3px double cvt($c-gray, 5);
+        transition: background 0.25s ease,
+                    border 0.25s ease,
+                    color 0.25s ease;
+
+        &:hover {
+            color: $c-white;
+            background: $c-gray;
+            border: 3px double $c-white;
+        }
+    }
+
+    .button-export {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    .chosen-container-single {
+        width: 100% !important;
+    }
+
+    .chosen-container-single .chosen-single {
+        line-height: 30px;
+
+        height: 30px;
+
+        background: transparent;
+        border-radius: 0;
+        border: 1px solid cvt($c-gray, 7);
+    }
+
+    .chosen-container-active.chosen-with-drop .chosen-single {
+        background: transparent;
+    }
+
+    .chosen-container-single .chosen-drop {
+        border-radius: 0;
+        border: 1px solid $c-white;
+        box-shadow: 0 2px 7px cvt($c-black, 5);
+    }
+}
+
+.textblock .wpcf7-form {
+    span {
+        font-size: 15px;
+        line-height: 1.1;
+    }
+
+    .wpcf7-mail-sent-ng {
+        font-size: 13px;
+
+        color: $c-white;
+        padding: 10px;
+        border: 0 none;
+        margin: 0;
+        background-color: $c-red;
+    }
+
+    .wpcf7-validation-errors {
+        font-size: 13px;
+
+        padding: 10px;
+        border: 0 none;
+        margin: 0;
+        background-color: $c-yellow;
+    }
+
+    .wpcf7-mail-sent-ok {
+        font-size: 13px;
+
+        color: $c-white;
+        padding: 10px;
+        border: 0 none;
+        margin: 0;
+        background-color: $c-green;
+    }
+
+    .wpcf7-not-valid-tip {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    .col-content {
+        h4 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        p { font-size: 18px; }
+    }
+
+}

@@ -1,0 +1,277 @@
+.c-timeline {
+    font-family: $ff-heading;
+
+    position: relative;
+    margin: 0 -84px;
+
+    .c-timeline-info {
+        text-align: center;
+
+        width: 652px;
+        margin: 0 auto;
+        position: relative;
+
+        padding-bottom: 60px;
+
+        background: transparent;
+        border: none;
+        box-shadow: none;
+
+        .c-timeline__year {
+            font-size: 40px;
+            font-weight: 900;
+
+            margin-bottom: 20px;
+
+            color: $c-primary;
+        }
+
+        .c-timeline__title {
+            font-size: 30px;
+            font-family: $ff-variant;
+
+            min-height: 72px;
+
+            color: $c-gray-d2;
+        }
+
+        .c-timeline__image-content {
+            display: inline-block;
+            width: 100%;
+            height: 290px;
+            position: relative;
+            margin-bottom: 110px;
+
+            img {
+                width: auto;
+                height: 290px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate3D(-50%, -50%, 0);
+
+                border-bottom: 6px solid $c-primary;
+
+            }
+        }
+
+        .c-timeline__excerpt {
+            font-family: $ff-text;
+            font-size: 20px;
+            line-height: 1.8;
+
+            padding: 0 40px;
+
+            color: $c-gray-d2;
+        }
+
+        .c-timeline__see-more {
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+
+            padding: 10px 20px;
+
+            color: $c-white;
+            background: $c-gray-d2;
+            transition: background 0.35s ease;
+
+            &:hover {
+                background: $c-primary;
+            }
+        }
+    }
+
+    .c-timeline-years {
+        padding: 0 60px;
+
+        width: 100%;
+        position: absolute;
+        top: 545px;
+
+        background: transparent;
+        border: none;
+        box-shadow: none;
+
+        .c-timeline__carrousel--item {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+
+            margin-bottom: 0;
+            position: relative;
+
+            color: $c-gray-d2;
+
+            .c-timeline__carrousel-year {
+                display: inline-block;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    width: 0;
+                    height: 4px;
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    bottom: -1px;
+
+                    transition: width 0.35s ease;
+                    background: $c-primary;
+                }
+            }
+
+            &:hover,
+            &.flex-active-slide {
+                .c-timeline__carrousel-year {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .flex-direction-nav {
+            display: inline-block;
+            width: 100%;
+            position: relative;
+
+            a {
+                text-align: center;
+
+                width: 32px;
+                height: 32px;
+                margin-top: -64px;
+                position: absolute !important;
+
+                opacity: 1 !important;
+                color: $c-gray-d2;
+
+                 &:before {
+                    font-family: $ff-icon;
+                    font-size: 42px;
+                    margin-top: 0;
+                }
+            }
+
+            .flex-next {
+                right: -60px;
+
+                &:hover { right: -60px; }
+
+                &:before {
+                    text-indent: 2px;
+                    content: '\f2fb';
+                }
+            }
+
+            .flex-prev {
+                left: -60px;
+
+                &:hover { left: -60px; }
+
+                &:before {
+                    text-indent: -2px;
+                    content: '\f2fa';
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: $media-query-desktop - 1) {
+    .c-timeline {
+        margin: 0;
+        .c-timeline-info {
+            width: 100%;
+
+            .c-timeline__year {
+                font-size: 28px;
+                margin: 0 0 10px;
+            }
+
+            .c-timeline__title {
+                font-size: 22px;
+
+                min-height: 60px;
+                margin: 0px 0 5px;
+            }
+
+            .c-timeline__excerpt {
+                font-size: 16px;
+                line-height: 1.7;
+                padding: 0 10px;
+            }
+
+            .c-timeline__image-content {
+                height: 170px;
+                margin-bottom: 70px;
+
+                img {
+                    height: 170px;
+                }
+            }
+        }
+
+        .c-timeline-years {
+            top: 290px;
+            margin-bottom: 75px;
+
+            .c-timeline__carrousel--item {
+                font-size: 18px;
+            }
+
+        }
+
+
+    }
+
+}
+
+@media all and (max-width: $media-query-tablet - 1) {
+    .c-timeline {
+        margin: 0;
+        .c-timeline-info {
+            width: 100%;
+
+            .c-timeline__year {
+                font-size: 24px;
+                margin: 0 0 10px;
+            }
+
+            .c-timeline__title {
+                font-size: 18px;
+
+                min-height: 60px;
+                margin: 0px 0 5px;
+            }
+
+            .c-timeline__excerpt {
+                font-size: 14px;
+                line-height: 1.6;
+                padding: 0 10px;
+            }
+
+            .c-timeline__image-content {
+                height: 140px;
+                margin-bottom: 70px;
+
+                img {
+                    height: 140px;
+                }
+            }
+        }
+
+        .c-timeline-years {
+            top: 275px;
+            margin-bottom: 75px;
+
+            .c-timeline__carrousel--item {
+                font-size: 18px;
+            }
+
+        }
+    }
+}
+

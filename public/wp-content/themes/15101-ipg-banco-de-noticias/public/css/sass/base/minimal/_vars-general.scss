@@ -1,0 +1,70 @@
+// contextual variables
+// --------------------
+$media-query-mobile: 320px  !default;
+$media-query-tablet: 768px  !default;
+$media-query-desktop: 960px  !default;
+$media-query-desk-hd: 1440px  !default;
+
+$container-mobile: 320px  !default;
+$container-tablet: 768px  !default;
+$container-desktop: 960px  !default;
+$container-desk-hd: 1440px  !default;
+
+$columns: 12  !default;
+$gutter: 30px  !default;
+$gutter-no: 0  !default;
+
+$br: 3px  !default;
+
+$z-front: 5  !default;
+$z-mid-front: 4  !default;
+$z-mid: 3  !default;
+$z-mid-back: 2  !default;
+$z-back: 1  !default;
+$z-back-negative: -1  !default;
+
+// animations
+// ----------
+$anim-bounce: cubic-bezier(0.800, -0.375, 0.275, 1.455)  !default;
+
+
+//Grays
+$c-white: #FFF  !default;
+$c-gray-l4: #eaeaea  !default;
+$c-gray-l3: #F8F8F8  !default;
+$c-gray-l2: #EEEEEE  !default;
+$c-gray-l1: #D0CFCF  !default;
+$c-gray: #B9B8B8  !default;
+$c-gray-d1: #7C7C7C  !default;
+$c-gray-d2: #323232  !default;
+$c-gray-d3: #262626  !default;
+$c-black: #000  !default;
+$c-gray-text: #454545  !default;
+
+//Ultils Colors
+$c-alert-red: #FFD450  !default;
+$c-attention-yellow: #FFD450  !default;
+$c-success-green: #84418E  !default;
+
+
+//Others Colors
+$c-sand: #F1F4ED  !default;
+$c-42i: #FFAA00  !default;
+$c-bg: #f8f8f8  !default;
+
+//Icons Color
+$c-icon-primary: $c-white  !default;
+$c-icon-secundary: $c-gray  !default;
+$c-icon-primary--active: $c-gray-d1  !default;
+$c-icon-secundary--active: $c-black  !default;
+
+//Contextual
+$c-initial: $c-white !default;
+$c-primary: #9b4dca !default;
+$c-secondary: #606c76 !default;
+$c-tertiary: #f4f5f6 !default;
+$c-quaternary: #d1d1d1 !default;
+
+$c-link: $c-gray-d1  !default;
+
+$bg: cvl($c-gray, 3)  !default;

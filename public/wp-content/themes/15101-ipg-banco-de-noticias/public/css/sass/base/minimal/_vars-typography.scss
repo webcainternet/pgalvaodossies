@@ -1,0 +1,61 @@
+// Import Typography
+@font-face {
+  font-family: 'material-design-icon';
+  src: url('../fonts/material-design-icon/Material-Design-Iconic-Font.woff2?v=2.1.0') format('woff2'),
+  url('../fonts/material-design-icon/Material-Design-Iconic-Font.woff?v=2.1.0') format('woff'),
+  url('../fonts/material-design-icon/Material-Design-Iconic-Font.ttf?v=2.1.0') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Typography
+// -------------------------
+$ff-heading:     Helvetica, Arial, sans-serif !default;
+$ff-text:        Helvetica, Arial, sans-serif !default;
+$ff-variant:     sans-serif, Helvetica, Arial, sans-serif !default;
+$ff-alt:         Helvetica, Arial, sans-serif !default;
+$ff-icon:        'material-design-icon' !default;
+// Font Size
+// ---------
+$fs-small: 12px !default;
+$fs-base: 16px !default;
+$fs-medium: 18px !default;
+$fs-big: 22px !default;
+$fs-large: 30px !default;
+$fs-title-card: 18px !default;
+$fs-title-card-mobile: 20px !default;
+$fs-title-page-mobile: 20px !default;
+$fs-title-page: 30px !default;
+
+
+// Font Weight
+// -----------
+$fw-light:     300 !default;
+$fw-bold:      700 !default;
+$fw-medium:    500 !default;
+$fw-regular:   400 !default;
+
+// Font Color
+// -----------
+$fc-headline:            $c-black !default;
+$fc-title-big:           $c-black !default;
+$fc-title-medium:        $c-gray !default;
+$fc-title-small:         $c-gray !default;
+
+$fc-text:                $c-black !default;
+$fc-text-light:          $c-gray !default;
+
+$fc-bullet:              $c-gray !default;
+$fc-dropcap:             $c-gray !default;
+
+
+
+// Spacing
+// -------
+$em: $fs-base !default;
+$en: $em/2 !default;
+
+
+// HR border color
+$hr: 1px $c-gray dashed !default;
+$hr-bold: 2px $c-gray dashed !default;

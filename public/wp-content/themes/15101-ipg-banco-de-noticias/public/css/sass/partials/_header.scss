@@ -1,0 +1,474 @@
+$header-height-mob: 100px;
+$header-height: 90px;
+
+.home {
+    .page-wrapper { margin-top: -$header-height-mob; }
+
+    .full-page {
+        min-height: 650px;
+    }
+
+    .header { margin-bottom: 0; }
+}
+
+.mobile-menu {
+    position: fixed;
+    display: block;
+    width: 300px;
+    height: 100%;
+    padding: 90px 30px;
+    top: 0;
+    right: 0;
+
+    transform-style: preserve-3d;
+    transform: translate3d(300px, 0, 0);
+    transition: transform 0.2s ease;
+    background: cvt($c-gray, 9);
+    z-index: $z-back;
+
+    &--active {
+        transform: translate3d(0, 0, 0);
+        overflow: auto;
+    }
+
+    &__title {
+        font-size: 22px;
+    }
+
+    &__list {
+        list-style-type: none;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        margin: 10px 0;
+    }
+
+    &__link {
+        color: $c-black;
+    }
+
+    &__text {
+        display: block;
+        margin-top: 90px;
+
+        color: $c-link;
+
+        &--arrow {
+            font-size: 41px;
+            text-align: center;
+            text-indent: -3px;
+
+            width: 44px;
+            height: 44px;
+            position: fixed;
+            right: 0.5em;
+            bottom: 0.5em;
+
+            border-radius: 50%;
+            background: rgba(218, 37, 28, 0.5);
+            color: $c-white;
+            z-index: 9;
+
+            .icon {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+.body--active {
+    overflow: hidden;
+
+    .header__brand {
+        path,
+        polygon {
+            fill: $c-white;
+        }
+
+        &:hover {
+            path,
+            polygon {
+                fill: cvt($c-white, 5);
+            }
+        }
+    }
+}
+
+.header {
+    text-align: center;
+
+    position: relative;
+    display: block;
+    width: 100%;
+    height: $header-height-mob;
+    margin: 0 0 90px;
+    top: 0;
+    left: 0;
+
+    z-index: $z-mid;
+    background: $c-white;
+
+    &__brand {
+        line-height: $header-height-mob - 5px /* compensação visual */;
+
+        position: relative;
+        display: inline-block;
+        width: 100px;
+        height: $header-height-mob;
+        vertical-align: middle;
+        z-index: $z-front;
+
+        svg {
+            line-height: $header-height-mob;
+            vertical-align: middle;
+        }
+
+        path,
+        polygon {
+            fill: $c-institutional;
+            transition: fill 0.75s ease;
+        }
+
+        &:hover {
+            path,
+            polygon {
+                fill: cvt($c-gray, 3);
+            }
+        }
+    }
+
+    &__mobile-toggle {
+        font-size: 32px;
+        line-height: $header-height-mob;
+
+        position: absolute;
+        display: inline-block;
+        height: $header-height-mob;
+        margin-right: 10px;
+        top: 0;
+        left: $gutter/2;
+
+        color: $c-gray;
+    }
+
+    &__menu {
+        display: none;
+        margin: 0 -20px;
+        padding: 20px;
+        vertical-align: middle;
+
+        background: $c-white;
+        box-shadow: 0 2px 2px cvt($c-black, 9),
+                    inset 0 3px 7px cvt($c-black, 8);
+
+        &--active { display: block; }
+    }
+
+    &__menu-mobile {
+        display: block;
+        margin-top: 40px;
+        padding-top: 20px;
+
+        border-top: 3px double cvt($c-institutional, 5);
+
+        .menu-item a {
+            color: cvt($c-black, 2) !important;
+            border: 1px double cvt($c-gray, 5) !important;
+        }
+    }
+
+    &__search {
+        font-size: 32px;
+        line-height: $header-height-mob;
+
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        right: $gutter/2;
+
+        color: $c-institutional;
+        z-index: $z-front;
+        transition: color 0.25s ease;
+
+        &:hover {
+            color: $c-institutional;
+        }
+
+        .icon-svg-close {
+            line-height: $header-height-mob;
+
+            display: none;
+            margin: 0 10px;
+
+            fill: $c-white;
+
+            &:hover {
+                color: cvt($c-white, 3);
+            }
+        }
+
+        &--active {
+            .icon-search2 { display: none; }
+            .icon-svg-close { display: block; }
+        }
+    }
+
+    &__cover {
+        position: fixed;
+        display: block;
+        width: 100%;
+        top: -100%;
+        left: 0;
+
+        background: cvt($c-institutional, 0.5);
+        opacity: 0;
+        transform: translateY(0);
+        transition: transform 0.5s ease,
+                    opacity 0.25s ease;
+
+        &--active {
+            opacity: 1;
+            transform: translateY(100%);
+        }
+    }
+
+    &__cover-form {
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        top: 50%;
+
+        transform: translateY(-100px);
+    }
+
+    .menu { padding: 0; }
+
+    .menu-item {
+        position: relative;
+        display: block;
+        margin: 20px 0;
+
+        a {
+            font-size: 14px;
+
+            position: relative;
+            display: block;
+            padding: 5px 10px;
+
+            color: $c-black;
+            box-shadow: 0 0 0 transparent;
+            border: 3px solid cvt($c-gray, 5);
+        }
+    }
+
+    .sub-menu { display: none; }
+
+    .current_page_item > a,
+    .current_page_parent > a,
+    .current-menu-item > a {
+        font-weight: $fw-bold;
+
+        color: $c-institutional;
+        border: 3px double $c-gray;
+        box-shadow: 0 2px 7px cvt($c-black, 8);
+
+        &:before,
+        &:after { display: none; }
+    }
+}
+
+@media all and (min-width: $media-query-tablet) {
+    .header {
+        &__brand { width: 110px; }
+
+        &__menu {
+            padding: 0;
+
+            box-shadow: 0 2px 2px cvt($c-black, 8);
+        }
+
+        &__menu-mobile {
+            display: none;
+        }
+
+        .menu-item {
+            display: inline-block;
+        }
+    }
+}
+
+
+@media all and (min-width: $media-query-desktop) {
+    .home {
+        .page-wrapper { margin-top: -$header-height; }
+    }
+
+    .header {
+        text-align: left;
+        line-height: $header-height;
+
+        height: $header-height;
+        padding: 0;
+
+        &__brand {
+            line-height: $header-height;
+            height: $header-height - 10px /* Compensação Visual */;
+        }
+
+        &__mobile-toggle {
+            display: none;
+        }
+
+        &__menu {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+
+            box-shadow: none;
+        }
+
+        &__search {
+            right: $gutter;
+        }
+
+        .menu {
+            margin: 0 0 0 20px;
+        }
+
+        .menu-item {
+            line-height: 1;
+
+            position: relative;
+            display: inline-block;
+            height: auto;
+            margin: 0 0 0 10px;
+
+            a {
+                font-size: 14px;
+
+                position: relative;
+                display: inline-block;
+                padding: 5px 10px;
+
+                border: none;
+                box-shadow: 0 0 0 transparent;
+                transition: color 0.25s ease,
+                            box-shadow 0.5s ease;
+
+                &:before {
+                    content: "";
+
+                    position: absolute;
+                    width: 100%;
+                    height: 0%;
+
+                    top: 0;
+                    left: 0;
+
+                    transition: height 0.5s ease;
+                }
+
+                &:after {
+                    content: "";
+
+                    position: absolute;
+                    width: 0%;
+                    height: 100%;
+
+                    top: -3px;
+                    left: 3px;
+
+                    transition: width 0.5s ease;
+                }
+
+                &:hover {
+                    color: $c-institutional;
+                    box-shadow: 0 2px 7px cvt($c-black, 8);
+                    transition: color 0.5s ease 0.5s,
+                                box-shadow 0.5s ease 0.5s;
+
+                    &:before {
+                        height: 100%;
+
+                        border-right: 3px double $c-gray;
+                        border-left: 3px double $c-gray;
+                    }
+
+                    &:after {
+                        width: 100%;
+
+                        border-top: 3px double $c-gray;
+                        border-bottom: 3px double $c-gray;
+                    }
+                }
+            }
+        }
+
+        .current_page_item > a,
+        .current_page_parent > a,
+        .current-menu-item > a {
+            font-weight: $fw-bold;
+
+            color: $c-institutional;
+            border: 3px double $c-gray;
+            box-shadow: 0 2px 7px cvt($c-black, 8);
+
+            &:before,
+            &:after { display: none; }
+        }
+
+        .sub-menu {
+            position: absolute;
+            display: block;
+            height: 0;
+            margin: 0;
+            padding: 0 20px;
+
+            background: $c-white;
+            overflow: hidden;
+            transition: height 0.5s ease,
+                        box-shadow 0.5s ease;
+
+            .current-menu-item a {
+                color: $c-institutional;
+                border: none;
+                box-shadow: none;
+            }
+
+            .menu-item {
+                display: block;
+                margin: 15px 0 0;
+
+                &:first-child {
+                    margin-top: 20px;
+                }
+
+                a {
+                    padding: 0;
+
+                    box-shadow: none;
+
+                    &:before,
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .menu-item-has-children {
+            &:hover {
+                box-shadow: 0 0 7px cvt($c-black, 8);
+                transition: box-shadow 0.5s ease 0.5s;
+
+                .sub-menu {
+                    height: 335px;
+                    box-shadow: 0 2px 7px cvt($c-black, 8);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.mashsb-buttons{
+    a{
+        border-radius: 50%;
+        background-color: $c-primary;
+
+        .icon{
+            color: $c-white;
+
+            &:before{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.mashsb-count{
+    display: none;
+}
+
+.mashsb-container{
+    display: table;
+    float: right;
+}
+
+.c-biblioteca{
+    .mashsb-container{
+        margin-top: -80px;
+    }
+}

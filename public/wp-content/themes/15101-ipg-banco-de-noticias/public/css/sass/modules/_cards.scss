@@ -1,0 +1,127 @@
+.cover {
+    position: relative;
+
+    &__story {
+        list-style-type: none;
+
+        display: block;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__title {
+        font-size: 32px;
+        text-transform: uppercase;
+
+        position: absolute;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0 5px;
+        top: 50%;
+        left: 0;
+
+        transform: translateY(-50%);
+
+        &--shadow {
+            top: 54%;
+            left: -4px;
+
+            color: cvt($c-black, 9);
+            z-index: -1;
+        }
+    }
+
+    &__title-frame {
+        text-align: center;
+
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 240px;
+        float: left;
+    }
+
+    &__frame {
+        display: inline-block;
+        width: (100%) / 3;
+        float: left;
+        padding: 5px;
+    }
+
+    &__frame-img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.summary {
+    display: block;
+    margin: 30px 0 0;
+    padding: 20px 30px;
+
+    border: 3px double cvt($c-gray,5);
+}
+
+.social-media-box {
+    font-family: $ff-text;
+    text-align: right;
+
+    display: block;
+    margin: 10px 0 -20px;
+
+    &__title {
+        font-size: 14px;
+        font-style: italic;
+        font-weight: $fw-regular;
+
+        margin: 0 0 5px;
+        vertical-align: middle;
+
+        color: cvt($c-black, 2);
+    }
+
+    &__icon {
+        font-size: 20px;
+        line-height: 20px;
+
+        display: inline-block;
+        margin: 0 5px;
+        vertical-align: bottom;
+
+        color: $c-gray;
+        transition: color 0.25s ease;
+
+        &:first-child { margin: 0; }
+
+        &:hover { color: $c-link; }
+
+        .icon-facebook3 { font-size: 22px; }
+    }
+}
+
+@media all and (min-width: $media-query-tablet) {
+    .cover {
+        &__frame {
+            &:nth-child(6),
+            &:nth-child(8) { display: none; }
+        }
+    }
+
+
+    .summary {
+        display: block;
+        margin: 90px 0 60px;
+    }
+}
+
+@media all and (min-width: $media-query-desktop) {
+    .cover {
+        &__frame {
+            &:nth-child(6),
+            &:nth-child(8) { display: block; }
+        }
+    }
+}

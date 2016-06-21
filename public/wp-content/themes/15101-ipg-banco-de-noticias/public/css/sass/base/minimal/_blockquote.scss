@@ -1,0 +1,12 @@
+// Blockquote
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 14px 20px;
+
+    border-left: 1 solid $c-quaternary;
+
+    & *:last-child { margin: 0; }
+}

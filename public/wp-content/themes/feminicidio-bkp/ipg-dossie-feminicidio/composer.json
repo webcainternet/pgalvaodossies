@@ -1,0 +1,20 @@
+{
+    "name": "42i/sossolteiros3",
+    "authors": [
+        {
+            "name": "42i",
+            "email": "projetos@42i.com.br"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:42i/42i-wp.git"
+        }
+    ],
+    "require": {
+        "tgmpa/tgm-plugin-activation": "~2.5.2",
+        "42ipd/qdi-wp": "*"
+    },
+    "minimum-stability": "dev"
+}

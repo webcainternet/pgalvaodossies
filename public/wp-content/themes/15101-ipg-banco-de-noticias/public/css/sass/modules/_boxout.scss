@@ -1,0 +1,46 @@
+.sc-boxout {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 300;
+
+    margin: 30px -84px;
+    padding: 10px 84px 10px;
+    display: inline-block;
+    position: relative;
+
+    background: $c-primary;
+    color: $c-white;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        height: 35px;
+        width: 100%;
+
+        background-image: url(../images/boxout/boxout-red-bg.png);
+        background-size: cover;
+    }
+
+}
+
+
+@media all and (max-width: $media-query-desktop - 1) {
+    .sc-boxout {
+        font-size: 20px;
+        &:after {
+            background-size: 110% 100%;
+        }
+    }
+}
+
+@media all and (max-width: $media-query-desktop - 1) {
+    .sc-boxout {
+        font-size: 18px;
+
+        &:after {
+            background-size: 110% 100%;
+        }
+    }
+}

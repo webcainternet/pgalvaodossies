@@ -1,0 +1,42 @@
+// Base
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $ff-text;
+    font-size: $fs-base;
+    font-weight: 400;
+
+    margin: 0;
+    position: relative;
+    min-height: 100%;
+
+    color: $c-secondary;
+
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
+    }
+}
+
+.c-wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto 0;
+    padding-bottom: 0;
+}
+
+::selection {
+    color: $c-white;
+    background: cvl($c-primary, 2);
+}
+
+::-moz-selection {
+    color: $c-white;
+    background: cvl($c-primary, 2);
+}

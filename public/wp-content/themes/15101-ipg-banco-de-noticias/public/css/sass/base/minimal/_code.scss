@@ -1,0 +1,28 @@
+// Code
+
+code {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    white-space: nowrap;
+
+    border-radius: 5px;
+    background: $c-tertiary;
+}
+
+pre {
+    font-family: 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Monaco', monospace;
+    background: $c-tertiary;
+    border-left: 2px solid $c-primary;
+
+
+    & > code {
+        white-space: pre;
+
+        display: block;
+        padding: 10px 15px;
+
+      	background: transparent;
+      	border-radius: 0;
+    }
+}

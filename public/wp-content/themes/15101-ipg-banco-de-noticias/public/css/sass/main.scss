@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+@import 'base/vars-typography',
+        'base/vars-general';
+
+@import "vendor/flexslider";
+@import "vendor/chosen";
+
+//Minimal style
+@import 'base/minimal/mixins',
+        'base/minimal/vars-general',
+        'base/minimal/vars-typography',
+        'base/minimal/grid',
+        'base/minimal/base',
+        'base/minimal/icons',
+        'base/minimal/blockquote',
+        'base/minimal/button',
+        'base/minimal/code',
+        'base/minimal/divider',
+        'base/minimal/form',
+        'base/minimal/link',
+        'base/minimal/list',
+        'base/minimal/spacing',
+        'base/minimal/table',
+        'base/minimal/typography',
+        'base/minimal/utility';
+
+@import 'base/mixins',
+        'base/mixins-colorset';
+
+@import 'modules/layout',
+        'modules/header/brand',
+        'modules/header/nav',
+        'modules/header/search',
+        'modules/highlight',
+        'modules/home',
+        'modules/text',
+        'modules/archive',
+        'modules/form',
+        'modules/contact',
+        'modules/section',
+        'modules/boxout',
+        'modules/summary',
+        'modules/clipping',
+        'modules/biblioteca',
+        'modules/dynamic-summary',
+        'modules/navigation',
+        'modules/pagination',
+        'modules/timeline',
+        'modules/footer/footer-top',
+        'modules/footer/footer-middle',
+        'modules/footer/footer-bottom';
+
+@include colorset($categories);

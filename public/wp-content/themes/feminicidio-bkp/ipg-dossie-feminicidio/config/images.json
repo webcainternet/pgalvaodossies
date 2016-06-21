@@ -1,0 +1,13 @@
+{
+  "regular": {
+    "width": 500,
+    "height": 500,
+    "cropped": true,
+    "default": true
+  },
+  "small": {
+    "width": 100,
+    "height": 100,
+    "cropped": true
+  }
+}

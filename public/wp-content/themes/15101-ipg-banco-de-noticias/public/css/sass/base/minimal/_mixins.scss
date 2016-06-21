@@ -1,0 +1,75 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+// Color Related
+@function cvl($color, $variant) {
+  @if $variant == 1 { @return lighten($color, 5%); }
+  @elseif $variant == 2 { @return lighten($color, 12%); }
+  @elseif $variant == 3 { @return lighten($color, 25%); }
+  @elseif $variant == 4 { @return lighten($color, 42%); }
+}
+
+@function cvd($color, $variant) {
+  @if $variant == 1 { @return darken($color, 5%); }
+   @elseif $variant == 2 { @return darken($color, 12%); }
+  @elseif $variant == 3 { @return darken($color, 25%); }
+  @elseif $variant == 4 { @return darken($color, 42%); }
+}
+
+@function cvt($color, $transparency) {
+    @return transparentize($color, $transparency * 0.1);
+}
+
+@mixin gradient_transparent($color1) {
+    background: $color1; /* Old browsers */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,1e5799+100&amp;0+0,1+60,1+100 */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, $color1 60%, $color1 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(60%,$color1), color-stop(100%,$color1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,$color1 60%,$color1 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,$color1 60%,$color1 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,$color1 60%,$color1 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,$color1 60%,$color1 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='$color1',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin gradient_transparent2($color1) {
+    background: $color1; /* Old browsers */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,1e5799+100&amp;0+0,1+60,1+100 */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, $color1 60%, $color1 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(60%,$color1), color-stop(100%,$color1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,$color1 60%,$color1 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,$color1 60%,$color1 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,$color1 60%,$color1 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,$color1 60%,$color1 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='$color1',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+
+    &:after { clear: both; }
+}
+
+@mixin hoverActiveFocus() {
+  &:hover, &:active, &:focus {
+    @content;
+  }
+}
+
+@mixin highPixelDensity() {
+  @media print,
+  (-o-min-device-pixel-ratio: 5/4),
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+    @content;
+  }
+}

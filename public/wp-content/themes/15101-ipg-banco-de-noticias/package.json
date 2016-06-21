@@ -1,0 +1,37 @@
+{
+  "name": "dossie",
+  "version": "0.0.1",
+  "description": "Site de notícias",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "del": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-concat": "*",
+    "gulp-imagemin": "*",
+    "gulp-install": "*",
+    "gulp-jshint": "*",
+    "gulp-livereload": "*",
+    "gulp-minify-css": "*",
+    "gulp-notify": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*"
+  },
+  "devDependencies": {
+    "gulp-bower": "*",
+    "gulp-connect": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:42i/42ipd.wireframe-template.git"
+  },
+  "author": "42i",
+  "license": "ISC"
+}

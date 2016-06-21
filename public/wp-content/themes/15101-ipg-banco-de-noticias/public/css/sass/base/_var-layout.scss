@@ -1,0 +1,76 @@
+// contextual variables
+// --------------------
+$media-query-mobile: 479px;
+$media-query-tablet: 719px;
+$media-query-desktop: 1099px;
+
+$container-mobile: 480px;
+$container-tablet: 720px;
+$container-desktop: 1100px;
+
+$columns: 12;
+$gutter: 50px;
+$gutter-no: 0;
+
+$br: 3px;
+
+$z-front: 5;
+$z-mid-front: 4;
+$z-mid: 3;
+$z-mid-back: 2;
+$z-back: 1;
+$z-back-negative: -1;
+
+// animations
+// ----------
+$anim-bounce: cubic-bezier(0.800, -0.375, 0.275, 1.455);
+
+//Grays
+$c-white: #FFF;
+$c-gray-l1: #F8F8F8;
+$c-gray: #8B8B8B;
+$c-black: #000;
+
+//Colors
+$c-red: #da251c;
+$c-orange: #ff5c29;
+$c-blue: #00a1eb;
+$c-green: #78d44a;
+$c-magenta: #d9007e;
+$c-yellow: #ffd533;
+$c-violet: #9624bf;
+
+$c-yellow-d1: cvd(#ffd533, 2);
+$c-blue-d1: cvd(#00a1eb, 2);
+$c-green-d1: cvd(#78d44a, 2);
+
+//Contextual
+$c-primary: $c-red;
+$c-institutional: $c-red;
+
+$c-link: $c-red;
+
+$bg: cvl($c-gray, 3);
+
+$categories_ipg: (general,                                                $c-gray, $c-red),
+                 (cultura-e-raizes-da-violencia,                          $c-orange, $c-violet),
+                 (violencia-domestica-e-familiar-contra-as-mulheres,      $c-green, $c-blue),
+                 (feminicidio,                                            $c-magenta, $c-yellow),
+                 (violencia-sexual,                                       $c-yellow, $c-orange),
+                 (violencia-de-genero-na-internet,                        $c-violet, $c-green),
+                 (violencia-contra-mulheres-lesbicas-bis-e-trans,         $c-blue, $c-red),
+                 (violencia-e-racismo,                                    $c-orange, $c-yellow),
+                 (percepcao-da-sociedade-e-tolerancia-social-a-violencia, $c-green-d1, $c-blue),
+                 (acoes-direitos-e-servicos-para-enfrentar-a-violencia,   $c-magenta, $c-violet),
+                 (glossario,                                              $c-violet, $c-orange);
+
+
+::selection {
+    color: $c-white;
+    background: cvt($c-primary, 3);
+}
+
+::-moz-selection {
+    color: $c-white;
+    background: cvt($c-primary, 3);
+}

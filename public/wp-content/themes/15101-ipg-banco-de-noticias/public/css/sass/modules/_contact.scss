@@ -1,0 +1,26 @@
+.c-contact__contente {
+    margin: 30px 0 0;
+
+    .filters {
+        margin: 0px 0 60px;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+
+@media all and (max-width: $media-query-desktop - 1) {
+    .c-contact__contente {
+        .filters {
+            &__item {
+                margin: 0;
+            }
+        }
+
+        .col-content {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+// List
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+dl,
+ol,
+ul {
+	margin-top: 0;
+	padding-left: 0;
+
+	dl
+	ul,
+	ol {
+		font-size: 12px;
+		margin: 20px 0 20px 30px;
+  }
+}
+
+dl { list-style: none; }
+
+ul { list-style: circle inside; }
+
+ol { list-style: decimal inside; }
+
+dt,
+dd,
+li { margin-bottom: 15px; }

@@ -1,0 +1,90 @@
+// Button
+
+.o-button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 36px;
+    letter-spacing: 14px;
+
+    display: inline-block;
+    height: 36px;
+    padding: 0 20px;
+    white-space: nowrap;
+    cursor: pointer;
+
+    background-color: $c-primary;
+    border: .1rem solid $c-primary;
+    border-radius: .4rem;
+    color: $c-initial;
+
+    &:hover,
+    &:focus {
+        outline: 0;
+      	background-color: $c-secondary;
+      	border-color: $c-secondary;
+      	color: $c-initial;
+    }
+
+    &.button-disabled,
+    &[disabled] {
+      	opacity: .5;
+      	cursor: default;
+
+      	&:hover,
+      	&:focus {
+      		background-color: $c-primary;
+      		border-color: $c-primary;
+        }
+    }
+
+    &.button-outline {
+      	color: $c-primary;
+      	background-color: transparent;
+
+      	&:hover,
+      	&:focus {
+        		color: $c-secondary;
+        		background-color: transparent;
+        		border-color: $c-secondary;
+        }
+
+      	&.button-disabled,
+      	&[disabled] {
+
+      		&:hover,
+      		&:focus {
+        			color: $c-primary;
+        			border-color: inherit;
+          }
+        }
+    }
+
+    &.button-clear {
+      	color: $c-primary;
+      	background-color: transparent;
+      	border-color: transparent;
+
+      	&:hover,
+      	&:focus {
+        		color: $c-secondary;
+        		background-color: transparent;
+        		border-color: transparent;
+        }
+
+      	&.button-disabled,
+      	&[disabled] {
+
+        		&:hover,
+        		&:focus {
+        			  color: $c-primary;
+            }
+        }
+    }
+}

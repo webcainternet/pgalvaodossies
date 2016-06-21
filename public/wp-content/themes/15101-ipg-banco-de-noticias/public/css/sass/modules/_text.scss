@@ -1,0 +1,550 @@
+.c-text {
+    font-family: $ff-text;
+    font-size: 20px;
+    line-height: 1.9;
+
+    padding: 0 84px;
+    margin: 0 auto;
+
+    color: $c-gray-text;
+
+    h2, h3, h4, h5, h6 {
+        font-family: $ff-variant;
+        margin: 30px -84px;
+        letter-spacing: 0;
+    }
+
+    h2 { font-size: 38px; }
+
+    h3 { font-size: 24px; }
+
+    h4 { font-size: 18px; }
+
+    h5 { font-size: 14px; }
+
+    h6 { font-size: 12px; }
+
+    ul {
+        list-style-type: square;
+
+    }
+
+    &--full {
+        padding: 0 0px;
+
+        h2, h3, h4, h5, h6 {
+            margin: 30px 0px;
+        }
+    }
+
+    .slides,
+    .flex-direction-nav {
+        list-style: none;
+    }
+
+    &__expanded {
+        margin: 0 -84px;
+    }
+
+    &__excerpt {
+        text-align: center;
+        font-family: $ff-variant;
+        font-size: 20px;
+        line-height: 38px;
+
+        display: block;
+    }
+
+    blockquote {
+        font-size: 20px;
+        font-style: italic;
+
+        position: relative;
+        padding: 0 0 30px;
+
+        border-bottom: 5px solid $c-primary;
+
+        h6 {
+            font-family: $ff-text;
+            font-size: 18px;
+            font-weight: normal;
+
+            margin: 10px 0 0;
+        }
+
+        &:before {
+            content: '“';
+            font-size: 130px;
+            font-family: $ff-heading;
+            font-style: normal;
+            font-weight: bold;
+
+            height: 100px;
+            display: block;
+            margin-bottom: 20px;
+
+            color: $c-primary;
+        }
+
+        &:after {
+            content: '';
+            width: calc(100% - 65px);
+
+            height: 5px;
+            position: absolute;
+            top: 90px;
+            right: 0;
+
+            background: $c-primary;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-bottom: 6px solid $c-primary;
+    }
+
+    a {
+        position: relative;
+
+        color: $c-primary;
+        transition: color 0.35s ease;
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 1px;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+
+            transition: width 0.35s ease;
+            background: $c-primary;
+        }
+
+        &:hover {
+            color: $c-primary;
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.capitulo-qual-o-papel-da-comunicacao {
+    .navigation {
+        background: $c-mossgreen;
+
+        .navigation {
+            &__normal {
+                .zmdi-format-list-bulleted {
+                    @include gradient_transparent-header($c-mossgreen);
+                }
+            }
+        }
+    }
+
+    .mobile-menu__text--arrow {
+        background: cvt($c-mossgreen, 3);
+    }
+
+    .c-highlight__title:before {
+        background-image: url(../images/title_band/title-band-mossgreen.png);
+    }
+
+    .c-text {
+        blockquote {
+            border-bottom: 5px solid $c-mossgreen;
+            &:before { color: $c-mossgreen; }
+            &:after { background: $c-mossgreen; }
+        }
+
+        img { border-bottom-color: $c-mossgreen; }
+
+        a {
+            color: $c-mossgreen;
+            &:after { background: $c-mossgreen; }
+        }
+
+        .sc-boxout {
+            background: $c-mossgreen !important;
+
+            &:after {
+                background-image: url(../images/boxout/boxout-mossgreen-bg.png);
+            }
+        }
+    }
+
+    .c-summary {
+        h3,
+        li:before { color: $c-mossgreen; }
+    }
+
+    .c-section {
+        border-bottom-color: $c-mossgreen;
+    }
+}
+
+.capitulo-o-que-e-feminicidio {
+    .navigation {
+        background: $c-lavanda;
+
+        .navigation {
+            &__normal {
+                .zmdi-format-list-bulleted {
+                    @include gradient_transparent-header($c-lavanda);
+                }
+            }
+        }
+    }
+
+    .mobile-menu__text--arrow {
+        background: cvt($c-lavanda, 3);
+    }
+
+    .c-highlight__title:before {
+        background-image: url(../images/title_band/title-band-lavanda.png);
+    }
+
+    .c-text {
+        blockquote {
+            border-bottom: 5px solid $c-lavanda;
+            &:before { color: $c-lavanda; }
+            &:after { background: $c-lavanda; }
+        }
+
+        img { border-bottom-color: $c-lavanda; }
+
+        a {
+            color: $c-lavanda;
+            &:after { background: $c-lavanda; }
+        }
+
+        .sc-boxout {
+            background: $c-lavanda !important;
+
+            &:after {
+                background-image: url(../images/boxout/boxout-lavanda-bg.png);
+            }
+        }
+    }
+
+    .c-summary {
+        h3,
+        li:before { color: $c-lavanda; }
+    }
+
+    .c-section {
+        border-bottom-color: $c-lavanda;
+    }
+}
+
+.capitulo-como-evitar-mortes-anunciadas {
+    .navigation {
+        background: $c-purple;
+        .navigation {
+            &__normal {
+                .zmdi-format-list-bulleted {
+                    @include gradient_transparent-header($c-purple);
+                }
+            }
+        }
+    }
+
+    .mobile-menu__text--arrow {
+        background: cvt($c-purple, 3);
+    }
+
+    .c-highlight__title:before {
+        background-image: url(../images/title_band/title-band-purple.png);
+    }
+
+    .c-text {
+        blockquote {
+            border-bottom: 5px solid $c-purple;
+            &:before { color: $c-purple; }
+            &:after { background: $c-purple; }
+        }
+
+        img { border-bottom-color: $c-purple; }
+
+        a {
+            color: $c-purple;
+            &:after { background: $c-purple; }
+        }
+
+        .sc-boxout {
+            background: $c-purple !important;
+
+            &:after {
+                background-image: url(../images/boxout/boxout-purple-bg.png);
+            }
+        }
+    }
+
+    .c-summary {
+        h3,
+        li:before { color: $c-purple; }
+    }
+
+    .c-section {
+        border-bottom-color: $c-purple;
+    }
+}
+
+.capitulo-como-e-por-que-morrem-as-mulheres {
+    .navigation {
+        background: $c-wine;
+        .navigation {
+            &__normal {
+                .zmdi-format-list-bulleted {
+                    @include gradient_transparent-header($c-wine);
+                }
+            }
+        }
+    }
+
+    .mobile-menu__text--arrow {
+        background: cvt($c-wine, 3);
+    }
+
+    .c-highlight__title:before {
+        background-image: url(../images/title_band/title-band-wine.png);
+    }
+
+    .c-text {
+        blockquote {
+            border-bottom: 5px solid $c-wine;
+            &:before { color: $c-wine; }
+            &:after { background: $c-wine; }
+        }
+
+        img { border-bottom-color: $c-wine; }
+
+        a {
+            color: $c-wine;
+            &:after { background: $c-wine; }
+        }
+
+        .sc-boxout {
+            background: $c-wine !important;
+
+            &:after {
+                background-image: url(../images/boxout/boxout-wine-bg.png);
+            }
+        }
+    }
+
+    .c-summary {
+        h3,
+        li:before { color: $c-wine; }
+    }
+
+    .c-section {
+        border-bottom-color: $c-wine;
+    }
+}
+
+.capitulo-qual-a-dimensao-do-problema-no-brasil {
+    .navigation {
+        background: $c-mustard;
+        .navigation {
+            &__normal {
+                .zmdi-format-list-bulleted {
+                    @include gradient_transparent-header($c-mustard);
+                }
+            }
+        }
+    }
+
+    .mobile-menu__text--arrow {
+        background: cvt($c-mustard, 3);
+    }
+
+    .c-highlight__title:before {
+        background-image: url(../images/title_band/title-band-mustard.png);
+    }
+
+    .c-text {
+        blockquote {
+            border-bottom: 5px solid $c-mustard;
+            &:before { color: $c-mustard; }
+            &:after { background: $c-mustard; }
+        }
+
+        img { border-bottom-color:  $c-mustard; }
+
+        a {
+            color: $c-mustard;
+            &:after { background: $c-mustard; }
+        }
+
+        .sc-boxout {
+            background: $c-mustard !important;
+
+            &:after {
+                background-image: url(../images/boxout/boxout-mustard-bg.png);
+            }
+        }
+    }
+
+    .c-summary {
+        h3,
+        li:before { color: $c-mustard; }
+    }
+
+    .c-section {
+        border-bottom-color: $c-mustard;
+    }
+}
+
+.capitulo-qual-o-quadro-de-enfrentamento-no-brasil-hoje {
+    .navigation {
+        background: $c-cyan;
+        .navigation {
+            &__normal {
+                .zmdi-format-list-bulleted {
+                    @include gradient_transparent-header($c-cyan);
+                }
+            }
+        }
+    }
+
+    .mobile-menu__text--arrow {
+        background: cvt($c-cyan, 3);
+    }
+
+    .c-highlight__title:before {
+        background-image: url(../images/title_band/title-band-cyan.png);
+    }
+
+    .c-text {
+        blockquote {
+            border-bottom: 5px solid $c-cyan;
+            &:before { color: $c-cyan; }
+            &:after { background: $c-cyan; }
+        }
+
+        img { border-bottom-color: $c-cyan; }
+
+        a {
+            color: $c-cyan;
+            &:after { background: $c-cyan; }
+        }
+
+        .sc-boxout {
+            background: $c-cyan !important;
+
+            &:after {
+                background-image: url(../images/boxout/boxout-cyan-bg.png);
+            }
+        }
+    }
+
+    .c-summary {
+        h3,
+        li:before { color: $c-cyan; }
+    }
+
+    .c-section {
+        border-bottom-color: $c-cyan;
+    }
+}
+
+@media all and (max-width: $media-query-desktop - 1) {
+    .c-text__excerpt {
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .c-text {
+        font-size: 18px;
+        line-height: 2.2;
+
+        padding: 0 50px;
+
+         h2, h3, h4, h5, h6 {
+            margin: 25px -25px;
+        }
+
+        h2 { font-size: 32px; }
+
+        h3 { font-size: 22px; }
+
+        h4 { font-size: 16px; }
+
+        h5 { font-size: 12px; }
+
+        h6 { font-size: 10px; }
+
+        blockquote {
+
+            &:before {
+
+                height: 110px;
+                margin-bottom: 30px;
+            }
+
+            &:after {
+                top: 110px;
+            }
+        }
+
+        ul {
+            li {
+                margin: 0 0 5px;
+            }
+        }
+
+
+    }
+}
+
+
+@media all and (max-width: $media-query-tablet - 1) {
+
+    .c-text__excerpt {
+        font-size: 16px;
+        line-height: 35px;
+    }
+
+    .c-text {
+        font-size: 16px;
+        line-height: 2;
+
+        padding: 24px;
+
+        h2, h3, h4, h5, h6 {
+            margin: 20px -12px;
+        }
+
+        h2 { font-size: 24px; }
+
+        h3 { font-size: 20px; }
+
+        h4 { font-size: 14px; }
+
+        h5 { font-size: 12px; }
+
+        h6 { font-size: 10px; }
+
+        blockquote {
+            font-size: 18px;
+
+            &:before {
+                font-size: 115px;
+
+                height: 90px;
+                margin-bottom: 30px;
+            }
+
+            &:after {
+                width: calc(100% - 53px);
+                top: 84px;
+            }
+        }
+    }
+}
+

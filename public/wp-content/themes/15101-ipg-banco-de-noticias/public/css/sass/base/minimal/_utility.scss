@@ -1,0 +1,94 @@
+// Utility
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.u-aligner {
+    text-align: center;
+
+    display: block;
+
+    &--left { text-align: left; }
+    &--right { text-align: right; }
+}
+
+.u-vertical-align {
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    &__child {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &--top {
+        &__child { vertical-align: top; }
+    }
+
+    &--bottom {
+        &__child { vertical-align: bottom; }
+    }
+}
+
+.u-hidden { display: none !important; }
+
+.u-hidden-xs { display: none; }
+
+.u-pull-left {
+  display: inline-block;
+  float: left !important;
+}
+
+.u-pull-right {
+  display: inline-block;
+  float: right !important;
+}
+
+.u-clearfix { @include clearfix(); }
+
+.u-block { display: block; }
+
+// Image utils
+// --------------------------------------------------
+.u-img-clipper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.u-img-full-width {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.u-img-thumb {
+  width: 100px;
+
+  img { width: 100%; }
+}
+
+.u-list-unstyled {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.u-no-mobile { display: none !important; }
+.u-no-desktop { display: inline-block !important; }
+
+@media (min-width: $media-query-tablet) {
+  .u-hidden-xs { display: inline-block; }
+  .u-hidden-md { display: none; }
+}
+
+@media (min-width: $media-query-desktop) {
+    .u-no-mobile { display: block !important; }
+    .u-no-desktop { display: none !important; }
+    .u-no-desktop-block { display: none !important; }
+}

@@ -1,0 +1,17 @@
+//Projects Colors
+$c-dossie-red: #c33129;
+$c-mustard: #e8a42b;
+$c-cyan: #4fbac7;
+$c-wine: #b94f6c;
+$c-mossgreen: #8ea786;
+$c-lavanda: #a49ec1;
+$c-purple: #46468b;
+
+$c-primary: $c-dossie-red;
+
+$categories: (qual-o-quadro-de-enfrentamento-no-brasil-hoje, $c-cyan),
+             (como-e-por-que-morrem-as-mulheres, $c-wine),
+             (o-que-e-feminicidio, $c-lavanda),
+             (qual-a-dimensao-do-problema-no-brasil, $c-mustard),
+             (qual-o-papel-da-comunicacao, $c-mossgreen),
+             (como-evitar-mortes-anunciadas, $c-purple);

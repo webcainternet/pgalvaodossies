@@ -1,0 +1,101 @@
+.c-footer-bottom {
+    font-size: 14px;
+
+    background: $c-gray-d2;
+
+    .c-institutional-nav {
+        padding: 10px 0;
+
+        &__item {
+            max-width: 110px;
+            margin: 0 20px 0 0;
+            display: inline-block;
+            vertical-align: middle;
+
+            &:last-child { margin-right: 0; }
+        }
+
+        &__item--copyright {
+            max-width: none;
+
+            color: $c-gray-l3;
+
+            .c-footer__span {
+                font-size: 12px;
+
+                position: relative;
+                margin-right: 25px;
+
+                color: $c-gray-l3;
+            }
+        }
+    }
+}
+
+.icon-svg {
+    &--42i {
+        width: 28px;
+        height: 27px;
+
+        &__part {
+            opacity: 0.75;
+            fill: $c-white;
+
+        }
+
+        &__1 { transition: 0.25s ease 0.025s; }
+        &__2 { transition: 0.25s ease 0.05s; }
+        &__3 { transition: 0.25s ease 0.075s; }
+        &__4 { transition: 0.25s ease 0.1s; }
+        &__5 { transition: 0.25s ease 0.125s; }
+        &__6 { transition: 0.25s ease 0.15s; }
+        &__7 { transition: 0.25s ease 0.175s; }
+        &__8 { transition: 0.25s ease 0.2s; }
+        &__9 { transition: 0.25s ease 0.225s; }
+        &__10 { transition: 0.25s ease 0.25s; }
+        &__11 { transition: 0.25s ease 0.275s; }
+        &__12 { transition: 0.25s ease 0.3s; }
+        &__13 { transition: 0.25s ease 0.325s; }
+        &__14 { transition: 0.25s ease 0.35s; }
+
+        &:hover {
+            .icon-svg--42i {
+                &__part {
+                    opacity: 1;
+                    fill: $c-42i;
+                }
+
+                &__1 { transition: 0.2s ease 0.025s; }
+                &__2 { transition: 0.2s ease 0.05s; }
+                &__3 { transition: 0.2s ease 0.075s; }
+                &__4 { transition: 0.2s ease 0.1s; }
+                &__5 { transition: 0.2s ease 0.125s; }
+                &__6 { transition: 0.2s ease 0.15s; }
+                &__7 { transition: 0.2s ease 0.175s; }
+                &__8 { transition: 0.2s ease 0.2s; }
+                &__9 { transition: 0.2s ease 0.225s; }
+                &__10 { transition: 0.2s ease 0.25s; }
+                &__11 { transition: 0.2s ease 0.275s; }
+                &__12 { transition: 0.2s ease 0.3s; }
+                &__13 { transition: 0.2s ease 0.325s; }
+                &__14 { transition: 0.2s ease 0.35s; }
+            }
+        }
+    }
+}
+
+@media all and (max-width: $media-query-desktop - 1) {
+    .c-footer {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        bottom: 0;
+    }
+    .c-footer-bottom {
+        width: 100%;
+
+        .c-institutional-nav__item {
+            svg { margin-top: -5px; }
+        }
+    }
+}

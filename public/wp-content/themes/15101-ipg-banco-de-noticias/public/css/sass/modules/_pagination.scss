@@ -1,0 +1,54 @@
+.o-paginate {
+
+    &--center{
+        display: table;
+        margin: 30px auto 30px;
+    }
+
+}
+
+.c-paginate{
+
+    &__item{
+        text-align: center;
+        float: left;
+        list-style: none;
+        color: $c-black;
+        font-weight: bold;
+
+        padding: 10px 10px;
+        cursor: pointer;
+        width: 70px;
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 4px;
+            display: block;
+            left: 0;
+            bottom: -1px;
+            margin-top: 5px;
+
+            transition: width 0.35s ease;
+            background: $c-primary;
+        }
+
+        span{
+            color: $c-black;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        &--active:after{
+            width: 100%;
+        }
+
+        &:hover{
+            &:after {
+                    width: 100%;
+            }
+
+        }
+
+    }
+}

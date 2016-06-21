@@ -1,0 +1,44 @@
+a {
+  text-decoration: none;
+
+	color: $c-primary;
+    transition: color 0.3s ease;
+	&:hover {
+		color: $c-secondary;
+    }
+}
+
+.o-link {
+    position: relative;
+    display: inline-block;
+
+    color: rgba(0,0,0,0.5);
+
+    &:after {
+
+        content: attr(data-after_content);
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        transition: transform 0.3s, opacity 0.3s;
+
+        color: $c-primary;
+    }
+
+    &:hover,
+    &:focus {
+        &:after {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+    }
+
+    &--variant {
+        color: $c-primary;
+
+        &:after {
+            color: cvd($c-gray-d1, 2);
+        }
+    }
+}

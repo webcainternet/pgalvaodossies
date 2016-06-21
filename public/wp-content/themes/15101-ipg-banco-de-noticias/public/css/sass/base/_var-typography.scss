@@ -1,0 +1,53 @@
+// Typography
+// -------------------------
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot?-9lfxew');
+	src:url('../fonts/icomoon/icomoon.eot?#iefix-9lfxew') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.ttf?-9lfxew') format('truetype'),
+		url('../fonts/icomoon/icomoon.woff?-9lfxew') format('woff'),
+		url('../fonts/icomoon/icomoon.svg?-9lfxew#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$ff-heading:     'Montserrat', Helvetica, Arial, "sans serif";
+$ff-text:        'Lato', Helvetica, Arial, "sans serif";
+$ff-alt:        'Lato', Helvetica, Arial, "sans serif";
+$ff-icon:        'Icomoon';
+
+// Font Size
+// ---------
+$fs-base: 20px;
+
+// Font Weight
+// -----------
+$fw-bold:      700;
+$fw-medium:    500;
+$fw-regular:   400;
+
+// Font Color
+// -----------
+$fc-headline:            $c-black;
+$fc-title-big:           $c-black;
+$fc-title-medium:        $c-gray;
+$fc-title-small:         $c-gray;
+
+$fc-text:                $c-black;
+$fc-text-light:          $c-gray;
+
+$fc-bullet:              $c-gray;
+$fc-dropcap:             $c-gray;
+
+
+
+// Spacing
+// -------
+$em: $fs-base;
+$en: $em/2;
+
+
+// HR border color
+$hr: 1px $c-gray dashed;
+$hr-bold: 2px $c-gray dashed;
